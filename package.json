@@ -1,21 +1,15 @@
 {
-  "name": "Festi-val",
+  "name": "project",
   "version": "1.0.0",
-  "description": "Discover the wonders of Oregon Eclipse Festival",
+  "description": "project",
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
     "start": "npm-run-all --parallel test:watch open:src lint:watch",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch",
-    "test": "mocha --reporter progress tools/testSetup.js src/**/*.test.js src/components/**/*.test.js",
-    "test:watch": "npm run test -- --watch",
-    "clean-dist": "npm run remove-dist && mkdir dist",
-    "remove-dist": "node_modules/.bin/rimraf ./dist",
-    "build:html": "babel-node tools/buildHtml.js",
-    "prebuild": "npm-run-all clean-dist test lint build:html",
-    "build": "babel-node tools/build.js",
-    "postbuild": "babel-node tools/distServer.js"
+    "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "hrod28",
   "license": "MIT",
@@ -41,8 +35,9 @@
     "babel-preset-react": "6.5.0",
     "babel-preset-react-hmre": "1.1.1",
     "babel-register": "6.8.0",
+    "cheerio": "0.22.0",
     "colors": "1.1.2",
-    "compression": "^1.6.1",
+    "compression": "1.6.1",
     "cross-env": "1.0.7",
     "css-loader": "0.23.1",
     "enzyme": "2.2.0",
@@ -72,6 +67,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hrod28/capstone-client"
+    "url": "https://github.com/hrod28/capstone-client/tree/first-components"
   }
 }
