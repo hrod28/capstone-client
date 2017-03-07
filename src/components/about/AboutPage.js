@@ -6,7 +6,15 @@ class AboutPage extends React.Component {
     return (
       <div>
         <h1>About</h1>
-        <p>This application is used to discover</p>
+        <h2>This portion of website for administration purposes.</h2>
+        <p>Use this page to:</p>
+        <p>*** add, edit, delete chef profiles **</p>
+        <p>*** add, edit, delete user profiles **</p>
+        <p>*** add, edit, delete comments **</p>
+        <p>*** manage user voting data **</p>
+        <p>*** manage user accounts **</p>
+        <p>*** baisic maintenance of website **</p>
+
       </div>
     );
   }
