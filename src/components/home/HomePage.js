@@ -5,9 +5,9 @@ import {Link} from 'react-router';
 class HomePage extends React.Component {
   render() {
     return (
-      <div className="jumbotron">
-        <h1>Festival Planning Administration</h1>
-        <p>Use this app to discover music</p>
+      <div>
+        <h1>Chef Challenge for Children</h1>
+        <p>Eat Up, Vote, Party</p>
         <Link to="about" className="btn btn-primary btn-lg">Learn More</Link>
       </div>
   );

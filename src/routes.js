@@ -1,23 +1,23 @@
 'use strict';
 import React from 'react';
-import {Router, Route, browserHistory, IndexRoute, Link } from 'react-router';
 
+import {Route, IndexRoute} from 'react-router';
+import App from './components/App';
+import HomePage from './components/home/HomePage';
+import AboutPage from './components/about/AboutPage';
+import StagePage from './components/stage/StagePage';
+import ChefProfilePage from './components/chefs/ChefProfilePage';
+import SchedulesPage from './components/schedules/SchedulesPage';
+import WorkshopsPage from './components/workshops/WorkshopsPage';
 
-var AppRouter = React.createClass({
+export default (
+  <Route path="/" component={App}>
+    <IndexRoute component={HomePage} />
+    <Route path="about" component={AboutPage} />
+    <Route path="stages" component={StagePage} />
+    <Route path="chefs" component={ChefProfilePage} />
+    <Route path="schedules" component={SchedulesPage} />
+    <Route path="workshops" component={WorkshopsPage} />
+  </Route>
+);
 
-  render: function(){
-    return(
-      <div>
-        <Router history={browserHistory}>
-          <Route path="/" component={landingContainer} />
-          <Route path="/feed" component={postsFeed} />
-          <Route path="/newPost" component={newPostForm} />
-          <Route path="/profile" component={profileContainer} />
-          <Route path="/myProfile" component={editProfileContainer} />
-        </Router>
-    </div>
-    )
-  }
-})
-
-export default AppRouter;
