@@ -1,3 +1,4 @@
+
 'use strict';
 import React, {PropTypes} from 'react';
 import Header from './common/Header';
@@ -18,3 +19,4 @@ App.PropTypes = {
 };
 
 export default App;
+
